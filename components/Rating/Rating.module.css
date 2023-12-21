@@ -1,18 +1,11 @@
-.p {
-	margin: 0;
+.filled svg {
+	fill: var(--primary);
 }
 
-.s {
-	font-size: 14px;
-	line-height: 24px;
+.star svg {
+	margin-right: 5px;
 }
 
-.m {
-	font-size: 16px;
-	line-height: 24px;
-}
-
-.l {
-	font-size: 18px;
-	line-height: 29px;
+.editable {
+	cursor: pointer;
 }
