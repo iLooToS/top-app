@@ -1,7 +1,8 @@
+import { withLayout } from '@/layout/Layout';
 import { Button, Htag, P, Tag, Rating } from '../components';
 import React, { useState } from 'react';
 
-export default function Home(): JSX.Element {
+function Home(): JSX.Element {
 	const [rating, setRating] = useState<number>(4);
 
 	return (
@@ -11,7 +12,7 @@ export default function Home(): JSX.Element {
 			<Button apperance='ghost' arrow='down'>Кнопка</Button>
 			<P size='l'>Большой</P>
 			<P>Средний</P>
-			<P size='s'>Маленький</P>
+			<P size='s'>Маленький</P> 
 			<Tag size='s'>Ghost</Tag>
 			<Tag size='m' color='red'>Red</Tag>
 			<Tag size='s' color='green'>Green</Tag>
@@ -20,3 +21,5 @@ export default function Home(): JSX.Element {
 		</>
 	);
 }
+
+export default withLayout(Home);
