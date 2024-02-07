@@ -5,6 +5,7 @@ import { GetStaticProps } from 'next';
 import axios from 'axios';
 import { MenuItem } from '@/interfaces/menu.interface';
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 function Home({ menu }: HomeProps): JSX.Element {
 	const [rating, setRating] = useState<number>(4);
 
