@@ -8,6 +8,7 @@ import styles from './Menu.module.css';
 import cn from 'classnames';
 import { format } from 'date-fns';
 import { useContext, useEffect } from 'react';
+import Link from 'next/link';
 import { TopLevelCategory } from '@/interfaces/page.interface';
 
 const firstLevelMenu: FirstLevelMenuItem[] = [
@@ -25,14 +26,16 @@ export const Menu = (): JSX.Element => {
 			<>
 				{firstLevelMenu.map(m => (
 					<div key={m.route}>
-						<a href={`/${m.route}`}>
-							<div className={cn(styles.firstLevel, {
-								[styles.firstLevelActive]: m.id == firstCategory
-							})}>
-								{m.icon}
-								<span >{m.name}</span>
-							</div>
-						</a>
+						<Link legacyBehavior href={`/${m.route}`}>
+							<a>
+								<div className={cn(styles.firstLevel, {
+									[styles.firstLevelActive]: m.id == firstCategory
+								})}>
+									{m.icon}
+									<span >{m.name}</span>
+								</div>
+							</a>
+						</Link>
 						{m.id == firstCategory && buildSecondLevel(m)}
 					</div >
 				))}
@@ -60,11 +63,13 @@ export const Menu = (): JSX.Element => {
 	const buildThirdLevel = (pages: PageItem[], route: string) => {
 		return (
 			pages.map(p => (
-				<a href={`/${route}/${p.alias}`} className={cn(styles.thirdLevel, {
-					[styles.thirdLevelActive]: false
-				})}>
-					{p.category}
-				</a >
+				<Link legacyBehavior href={`/${route}/${p.alias}`}>
+					<a className={cn(styles.thirdLevel, {
+						[styles.thirdLevelActive]: false
+					})}>
+						{p.category}
+					</a >
+				</Link>
 			))
 		);
 	};
