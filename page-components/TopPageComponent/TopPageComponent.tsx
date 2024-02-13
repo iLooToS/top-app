@@ -7,3 +7,5 @@ export const TopPageComponent = ({ page, products, firstCategory }: TopPageCompo
 		</>
 	);
 };
+
+//trash
