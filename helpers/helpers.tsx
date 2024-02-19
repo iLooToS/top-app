@@ -11,3 +11,5 @@ export const firstLevelMenu: FirstLevelMenuItem[] = [
 	{ route: 'bookds', name: 'Книги', icon: <BooksIcon />, id: TopLevelCategory.Books },
 	{ route: 'products', name: 'Продукты', icon: <ProducstIcon />, id: TopLevelCategory.Products },
 ];
+
+export const priceRu = (price: number): string => price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ').concat(' ₽');
