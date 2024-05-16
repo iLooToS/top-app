@@ -11,7 +11,9 @@ import { Divider } from '../Divider/Divider';
 export const Product = ({ product, className, ...props }: ProductProps): JSX.Element => {
 	return (
 		<Card className={styles.product}>
-			<div className={styles.logo}><img src={product.image} alt={product.title} /></div>
+			<div className={styles.logo}>
+				<img src={product.image} alt={product.title} />
+			</div>
 			<div className={styles.title}>{product.title}</div>
 			<div className={styles.price}>
 				{priceRu(product.price)}
