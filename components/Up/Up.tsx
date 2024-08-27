@@ -3,6 +3,7 @@ import styles from "./Up.module.css";
 import UpIcon from "./Up.svg";
 import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
+import { ButtonIcon } from "../ButtonIcon/ButtonIcon";
 
 export const Up = (): JSX.Element => {
   const controls = useAnimation();
@@ -17,13 +18,12 @@ export const Up = (): JSX.Element => {
   };
 
   return (
-    <motion.button
+    <motion.div
       animate={controls}
       className={styles.up}
-      onClick={scrollToTop}
-	  initial={{ opacity: 0 }}
+      initial={{ opacity: 0 }}
     >
-      <UpIcon />
-    </motion.button>
+      <ButtonIcon apperance="primary" icon="up" onClick={scrollToTop} />
+    </motion.div>
   );
 };
