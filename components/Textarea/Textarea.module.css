@@ -7,7 +7,7 @@
 	border-radius: 5px;
 	outline-color: var(--primary);
 	background: var(--white);
-	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.05);
 
 	font-family: var(--font-family);
 	font-size: 16px;
@@ -30,5 +30,6 @@
 	position: absolute;
 	bottom: -15px;
 	left: 0;
+
 	color: var(--red);
 }

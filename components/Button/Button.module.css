@@ -6,12 +6,12 @@
 
 	cursor: pointer;
 	text-align: center;
-	
+
 	border: none;
 	border-radius: 5px;
-	
+
 	font-size: 14px;
-	
+
 	/* stylelint-disable-next-line order/properties-order */
 	transition: all 0.2s;
 }

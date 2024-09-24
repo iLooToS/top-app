@@ -9,7 +9,8 @@
 	line-height: 24px;
 }
 
-.description, .submit {
+.description,
+.submit {
 	grid-column: start / end;
 }
 
@@ -33,14 +34,14 @@
 	margin-top: 20px;
 	padding: 20px;
 
-	border-radius: 5px;		
+	border-radius: 5px;
 }
 
-.success {	
+.success {
 	background: var(--green-light);
 }
 
-.error {	
+.error {
 	background: var(--red-light);
 }
 
@@ -52,6 +53,7 @@
 	position: absolute;
 	top: 20px;
 	right: 20px;
+
 	border: none;
 	background: none;
 }

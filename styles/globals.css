@@ -20,10 +20,12 @@ a {
 }
 
 .visualyHidden {
-	width: 0px;
-	height: 0px;
-	overflow: hidden;
 	position: absolute;
+
+	overflow: hidden;
+
+	width: 0;
+	height: 0;
 }
 
 :root {
@@ -32,7 +34,7 @@ a {
 	--gray: #A4A4A4;
 	--gray-dark: #6C7077;
 	--white: white;
-	--primary: #7351f5;
+	--primary: #7351F5;
 	--primary-hover: #6344DF;
 	--red-light: #FEA291;
 	--red: #FC836D;
