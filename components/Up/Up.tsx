@@ -23,7 +23,12 @@ export const Up = (): JSX.Element => {
       className={styles.up}
       initial={{ opacity: 0 }}
     >
-      <ButtonIcon apperance="primary" icon="up" onClick={scrollToTop} />
+      <ButtonIcon
+        apperance="primary"
+        icon="up"
+        aria-label="Наверх"
+        onClick={scrollToTop}
+      />
     </motion.div>
   );
 };
